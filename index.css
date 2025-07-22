@@ -1,0 +1,299 @@
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background: url("image/ChatGPT\ Image\ Jul\ 20\,\ 2025\,\ 03_31_16\ PM.png");
+      background-size: cover;
+      background-position: center;
+    }
+
+    nav {
+      width: 90%;
+      margin: auto;
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin: 0 5px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #494234;
+      font-size: 17px;
+      padding: 0.3rem 1.3rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    nav ul li a::after {
+      content: "";
+      width: 0;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 20px;
+      background-color: #C8EBB1;
+      z-index: -1;
+      transition: 0.5s;
+    }
+
+    nav ul li a:hover:after {
+      width: 100%;
+    }
+
+    nav img {
+      width: 70px;
+      height: 70px;
+    }
+
+    .main-content {
+      width: 70%;
+      margin: auto;
+      padding-top: 80px;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .swiper {
+      width: 300px;
+      height: 400px;
+      border-radius: 20px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+
+    .main-text {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .main-text h1 {
+      font-size: 40px;
+      color: #222;
+    }
+
+    .main-text p {
+      margin-top: 10px;
+      font-size: 15px;
+      color: #222;
+    }
+
+    .main-text button {
+      margin-top: 2.5rem;
+      outline: none;
+      border: none;
+      font-size: 18px;
+      padding: 0.5rem 2.5rem 0.5rem 1rem;
+      border-radius: 0 50% 50% 0;
+      background-color: hsla(40, 17%, 25%, 0.801);
+      color: white;
+      cursor: pointer;
+    }
+.right{
+  position: absolute;
+  right: 8%;
+  bottom: 20%;
+} 
+.box{
+  display: flex;
+  align-items: center;
+}   
+.image img{
+  height: 60px;
+}
+.image{
+  margin-top: 2rem;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  box-shadow: -5px 5px 17px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+.image:hover{
+  background-color: rgba(73, 66, 52, 0.7);
+}
+.box .inner-box{
+  margin: 1.5rem 0 0 1rem;
+}
+.box .inner-box p{
+  font-size: 14px;
+  font-weight: 500;
+}
+.social-icon{
+  position: absolute;
+  right: 5%;
+  bottom:  5%;
+
+}
+.social-icon i{
+  margin-left: 10px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #93C572;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+.social-icon i:hover{
+  transform: translateY(-5px);
+}
+.social-icon::before{
+  content: "";
+  width: 80%;
+  height: 3px;
+  position: absolute;
+  top: 42%;
+  left: -150px;
+  background-color: #494234;
+}
+
+
+/* Responsive */
+
+
+/* Tablet Screens (≤1024px) */
+@media (max-width: 1024px) {
+  .main-content {
+    width: 85%;
+    gap: 1.5rem;
+  }
+
+  .swiper {
+    width: 280px;
+    height: 350px;
+  }
+
+  .main-text h1 {
+    font-size: 32px;
+  }
+
+  .main-text p {
+    font-size: 14px;
+  }
+
+  nav ul li a {
+    font-size: 15px;
+    padding: 0.3rem 1rem;
+  }
+}
+
+/* Mobile Screens (≤768px) */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .main-content {
+    flex-direction: column;
+    width: 90%;
+    text-align: center;
+    padding-top: 50px;
+  }
+
+  .swiper {
+    width: 100%;
+    height: 280px;
+  }
+
+  .main-text h1 {
+    font-size: 26px;
+  }
+
+  .main-text p {
+    font-size: 13px;
+  }
+
+  .main-text button {
+    font-size: 16px;
+    padding: 0.4rem 1.8rem;
+  }
+
+  .right {
+    position: static;
+    margin-top: 30px;
+  }
+
+  .social-icon {
+    position: static;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .social-icon::before {
+    display: none;
+  }
+
+  .box {
+    justify-content: center;
+  }
+
+  .box .inner-box {
+    margin: 1rem 0 0 1rem;
+  }
+}
+
+/* Extra Small Screens (≤480px) */
+@media (max-width: 480px) {
+  .main-text h1 {
+    font-size: 22px;
+  }
+
+  .main-text p {
+    font-size: 12px;
+  }
+
+  .main-text button {
+    font-size: 15px;
+    padding: 0.4rem 1.5rem;
+  }
+
+  .swiper {
+    height: 240px;
+  }
+
+  nav img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .image img {
+    height: 45px;
+  }
+}
